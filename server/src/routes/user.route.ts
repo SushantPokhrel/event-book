@@ -1,8 +1,8 @@
 import express from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { prisma } from "../lib/db";
-import { verifyToken } from "../middlewares/auth";
+import { prisma } from "../lib/db.js";
+import { verifyToken } from "../middlewares/auth.js";
 
 const router = express.Router();
 const ONE_HOUR_MS = 3600000;

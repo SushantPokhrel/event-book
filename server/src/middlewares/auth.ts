@@ -7,7 +7,7 @@ interface CustomJwtPayload extends JwtPayload {
   email: string;
   phone: string;
 }
-import { prisma } from "../lib/db";
+import { prisma } from "../lib/db.js";
 const verifyToken = async (req: Request, res: Response, next: NextFunction) => {
   try {
     // console.log(req.cookies);

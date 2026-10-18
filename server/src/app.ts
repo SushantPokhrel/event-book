@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import { router as userRoutes } from "./routes/user.route";
-import { router as eventRoutes } from "./routes/events.route";
-import { router as bookingRoutes} from "./routes/booking.route"
+import { router as userRoutes } from "./routes/user.route.js";
+import { router as eventRoutes } from "./routes/events.route.js";
+import { router as bookingRoutes} from "./routes/booking.route.js"
 const app = express();
 app.use(
   cors({

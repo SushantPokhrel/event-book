@@ -1,4 +1,4 @@
-import { prisma } from "./db";
+import { prisma } from "./db.js";
 import bcrypt from "bcryptjs";
 console.log(process.env.ADMIN_PASS);
 

@@ -1,6 +1,6 @@
 import express from "express";
-import { prisma } from "../lib/db";
-import { restrictTo, verifyToken } from "../middlewares/auth";
+import { prisma } from "../lib/db.js";
+import { restrictTo, verifyToken } from "../middlewares/auth.js";
 const router = express.Router();
 
 router.get("/", verifyToken, async (req, res) => {
