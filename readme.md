@@ -40,8 +40,8 @@ Small event discovery and booking app with separate admin and user dashboards.
 
 ### Accounts
 
-- Admin: `admin123@gmail.com`
-- Admin password: will be provided in the mail to check and verify admin dashboard.
+- Admin account: `admin123@gmail.com` seeded from seed script.
+- Admin password: `admin_password_very_secure`.
 - User: register through `/auth`
 
 
@@ -51,7 +51,7 @@ Admin users create, edit, and delete events. Regular users browse events, book s
 
 - `User`: account details and `USER` or `ADMIN` role.
 - `Event`: title, description, date, time, venue, and total seats.
-- `Booking`: joins a user to an event with `CONFIRMED` or `CANCELLED` status. The compound key prevents duplicate bookings for the same user and event.
+- `Booking`: joins a user to an event with `CONFIRMED` or `CANCELLED` status. The composite key prevents duplicate bookings for the same user and event.
 
 ## API
 
@@ -61,7 +61,7 @@ Base URL: `http://localhost:8000/api`
 - `POST /auth/login` - login and set the HTTP-only token cookie
 - `POST /auth/logout` - clear the token cookie
 - `GET /auth/me` - return the logged-in user
-- `GET /events` - list public events
+- `GET /events` - list public events and search events by ?title=
 - `GET /events/:id` - get an event and available seats
 - `POST /events` - admin-only event creation
 - `PUT /events/:id` - admin-only event update

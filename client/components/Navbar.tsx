@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 
-const navItems = [[ "#how-it-works"]];
+const navItems = [[ "events","/events"]];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -45,9 +45,19 @@ const getEventData = (body: {
   };
 };
 
-router.get("/", async (_req, res) => {
+router.get("/", async (req, res) => {
   try {
+    const title =
+      typeof req.query.title === "string" ? req.query.title.trim() : "";
     const events = await prisma.event.findMany({
+      where: title
+        ? {
+            title: {
+              contains: title,
+              mode: "insensitive",
+            },
+          }
+        : undefined,
       orderBy: { eventDate: "asc" },
     });
     return res.status(200).json({ events });
