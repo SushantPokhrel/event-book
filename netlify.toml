@@ -1,0 +1,4 @@
+[build]
+  base = "client"
+  publish = ".next"
+  command = "npm run build"
