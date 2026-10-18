@@ -50,14 +50,12 @@ router.get("/", async (req, res) => {
     const title =
       typeof req.query.title === "string" ? req.query.title.trim() : "";
     const events = await prisma.event.findMany({
-      where: title
-        ? {
-            title: {
-              contains: title,
-              mode: "insensitive",
-            },
-          }
-        : undefined,
+      where: {
+        title: {
+          contains: title,
+          mode: "insensitive",
+        },
+      },
       orderBy: { eventDate: "asc" },
     });
     return res.status(200).json({ events });
