@@ -4,8 +4,8 @@ Small event discovery and booking app with separate admin and user dashboards.
 
 ## Live Links
 
-- Frontend: `http://localhost:3000`
-- API: `http://localhost:8000`
+- Frontend: `https://event-book-ruby.vercel.app`
+- Backend_URL: `https://event-book-73l8.onrender.com/api`
 
 ## Tech Stack
 
@@ -41,8 +41,9 @@ Small event discovery and booking app with separate admin and user dashboards.
 ### Accounts
 
 - Admin: `admin123@gmail.com`
-- Admin password: the value of `ADMIN_PASS` in `server/.env.development`
+- Admin password: will be provided in the mail to check and verify admin dashboard.
 - User: register through `/auth`
+
 
 Admin users create, edit, and delete events. Regular users browse events, book seats, view their bookings, and cancel bookings.
 
@@ -71,10 +72,11 @@ Base URL: `http://localhost:8000/api`
 
 ## Decisions And Trade-offs
 
+- Frontend is built with the help of AI for repetitive tasks and styling.
+- Frontend routing design is simple and easy.
 - JWTs are stored in HTTP-only cookies so client JavaScript cannot read the token.
 - Client route guards improve navigation, while backend middleware remains responsible for authorization.
 - Available seats are calculated as `totalSeats - confirmedBookings`; cancelled bookings free a seat.
-- Booking records are cancelled instead of deleted so booking history remains traceable.
 - Event updates reject a total seat count lower than the number of confirmed bookings.
 - The UI is intentionally simple and uses client fetching to keep the implementation small.
 
@@ -95,6 +97,9 @@ cd client && npm run build
 ## Known Issues / Next Steps
 
 - Add API and frontend tests.
-- Add pagination and richer booking history, including cancelled bookings.
+- Add pagination for events rendering.
 - Add concurrency-safe seat reservation handling for simultaneous bookings.
 - Improve frontend design and past events booking restriction addition.
+
+## Remarks
+- Good to have participated in this project assessment stage, worth my time.
