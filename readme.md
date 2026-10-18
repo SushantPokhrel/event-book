@@ -85,15 +85,7 @@ Base URL: `http://localhost:8000/api`
 
 GitHub Copilot and manus ai was used for repetitive implementation tasks, route and UI scaffolding, typescript type errors explanations, discussing approach to build a certain feature etc.
 
-## Checks
 
-Automated tests are currently skipped. Available checks:
-
-```bash
-cd server && npm run build
-cd client && npm run lint
-cd client && npm run build
-```
 
 ## Known Issues / Next Steps
 
@@ -101,6 +93,7 @@ cd client && npm run build
 - Add pagination for events rendering.
 - Add concurrency-safe seat reservation handling for simultaneous bookings.
 - Improve frontend design and past events booking restriction addition.
+- Automated Tests are left to be implemented but i have verified all backend rules manually for now.
 
 ## Remarks
 - Good to have participated in this project assessment stage, worth my time.
