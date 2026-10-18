@@ -72,6 +72,7 @@ Base URL: `http://localhost:8000/api`
 
 ## Decisions And Trade-offs
 
+- Backend is hosted on render free tier, so it gives a cold start after inactivity.
 - Frontend is built with the help of AI for repetitive tasks and styling.
 - Frontend routing design is simple and easy.
 - JWTs are stored in HTTP-only cookies so client JavaScript cannot read the token.
